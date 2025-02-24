@@ -1,4 +1,3 @@
-const formEl = document.getElementById("member_form")
 const cardsEl = document.querySelector(".cards")
 const teamMembers = [
     {
@@ -56,38 +55,6 @@ function renderTeamMembers(membersArray, domEl) {
 }
 
 renderTeamMembers(teamMembers, cardsEl)
-
-
-formEl.addEventListener("submit", (e) => {
-    
-    e.preventDefault()
-    
-    const name = document.querySelector('input[name="name"]').value
-    console.log(name);
-    const role = document.querySelector('input[name="role"]').value
-    console.log(role);
-    const email = document.querySelector('input[name="email"]').value
-    console.log(email);
-    const image = document.querySelector('input[name="image"]').value
-    console.log(image);
-
-    const member = {
-        name,
-        role,
-        email,
-        image
-    }
-    console.log(member);
-
-    // funzione che ritorna il markup
-    const markup = getMemberMarkup(member)
-    
-    cardsEl.innerText += markup // stampo la card dell'HTML e anche le card con i valori generati da ciò che inserisce l'utente negli input
-    
-    // versione estesa
-    // cardsEl.innerText = cardsEl.innerText + markup
-    
-});
 
 function getMemberMarkup(memberObj) {
     // destrutturazione dell'oggetto
