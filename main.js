@@ -68,7 +68,7 @@ function getMemberMarkup(memberObj) {
                 <div class="mt-2">
                     <h3><strong>${name}</strong></h3>
                     <p>${role}</p>
-                    <p class="text-primary">${email}</p>
+                    <p class="text-info">${email}</p>
                 </div>
             </div>
         </div>`
