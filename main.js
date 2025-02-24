@@ -66,7 +66,7 @@ function getMemberMarkup(memberObj) {
             <div class="card-body d-flex bg-dark text-light text-start p-0">
                 <img src=${img} style="width: 30%;" alt="" class="card-mg-top me-3">
                 <div class="mt-2">
-                    <h3><strong>${name}</strong></h3>
+                    <h3><strong>${name.toUpperCase()}</strong></h3>
                     <p>${role}</p>
                     <p class="text-info">${email}</p>
                 </div>
