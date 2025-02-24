@@ -43,23 +43,27 @@ console.log(teamMembers);
 
 function renderTeamMembers(membersArray, domEl) {
     for (let i = 0; i < membersArray.length; i++) {
+        // prendo il membro corrente
         const thisMember = membersArray[i];
+        // e lo stampo
         console.log(thisMember);
         
-        // funzione che restituisce il markup
+        // genero il codice HTML della card
         const markup = getMemberMarkup(thisMember)
         console.log(markup);
-        
+        // aggiungo il codice HTML generato dentro il DOM
         domEl.innerHTML += markup
     }
 }
 
+// richiamo la funzione per eseguire il rendering
 renderTeamMembers(teamMembers, cardsEl)
 
 function getMemberMarkup(memberObj) {
-    // destrutturazione dell'oggetto
+    // destrutturo l'oggetto
     const {name, role, email, img} = memberObj
-    console.log(name.toUpperCase(), role, email, img);
+    // e lo stampo
+    console.log(name, role, email, img);
     
     const markup = `
         <div class="card col-4">
@@ -73,6 +77,8 @@ function getMemberMarkup(memberObj) {
             </div>
         </div>`
 
+    // stampo il markup generato
     console.log(markup);
+    // e restituisco il codice HTML
     return markup
 }
