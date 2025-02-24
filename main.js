@@ -64,10 +64,10 @@ function getMemberMarkup(memberObj) {
     const markup = `
         <div class="card col-4">
             <img src="${image}" style="width: 232px;" alt="" class="card-mg-top">
-            <div class="card-body">
+            <div class="card-body bg-dark text-light">
                 <h3>"${name}"</h3>
                 <p>"${role}"</p>
-                <p>"${email}"</p>
+                <p class="text-primary">"${email}"</p>
             </div>
         </div>`
 
