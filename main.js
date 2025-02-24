@@ -59,13 +59,13 @@ renderTeamMembers(teamMembers, cardsEl)
 function getMemberMarkup(memberObj) {
     // destrutturazione dell'oggetto
     const {name, role, email, image} = memberObj
-    console.log(name, role, email, image);
+    console.log(name.toUpperCase(), role, email, image);
     
     const markup = `
         <div class="card col-4">
             <img src="${image}" style="width: 100px;" alt="" class="card-mg-top">
             <div class="card-body bg-dark text-light">
-                <h3>"${name}"</h3>
+                <h3><strong>"${name}"</strong></h3>
                 <p>"${role}"</p>
                 <p class="text-primary">"${email}"</p>
             </div>
